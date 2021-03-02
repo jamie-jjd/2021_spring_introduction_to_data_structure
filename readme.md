@@ -1,1 +1,1 @@
-### reference solutions for practices, assignments, and exams
+### reference solutions for practice, assignment, and exam
