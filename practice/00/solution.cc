@@ -1,12 +1,12 @@
 // alternative 1
-vector<int> reverseArray(vector<int> a)
+std::vector<int> reverseArray (std::vector<int> a)
 {
-  reverse(a.begin(), a.end());
+  std::reverse(a.begin(), a.end());
   return a;
 }
 
 // alternative 2
-vector<int> reverseArray(vector<int> a)
+std::vector<int> reverseArray (std::vector<int> a)
 {
-  return vector<int>(a.rbegin(), a.rend());
+  return std::vector<int>(a.rbegin(), a.rend());
 }
