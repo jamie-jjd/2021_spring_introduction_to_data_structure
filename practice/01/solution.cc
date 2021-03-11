@@ -1,10 +1,10 @@
-vector<string> Search (vector<long> A, vector<long> Q)
+std::vector<string> Search (std::vector<long> A, std::vector<long> Q)
 {
-  vector<string> R;
-  sort(A.begin(), A.end());
+  std::vector<string> R;
+  std::sort(A.begin(), A.end());
   for (auto const &q : Q)
   {
-    if (binary_search(A.begin(), A.end(), q))
+    if (std::binary_search(A.begin(), A.end(), q))
     {
       R.push_back("yes");
     }
