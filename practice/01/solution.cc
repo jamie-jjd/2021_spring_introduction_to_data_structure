@@ -1,16 +1,16 @@
 std::vector<string> Search (std::vector<long> A, std::vector<long> Q)
 {
-  std::vector<string> R;
+  std::vector<string> R(Q.size());
   std::sort(A.begin(), A.end());
   for (auto const &q : Q)
   {
     if (std::binary_search(A.begin(), A.end(), q))
     {
-      R.push_back("yes");
+      R.emplace_back("yes");
     }
     else
     {
-      R.push_back("no");
+      R.emplace_back("no");
     }
   }
   return R;
