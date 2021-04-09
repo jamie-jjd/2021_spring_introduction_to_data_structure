@@ -54,7 +54,8 @@ std::vector<long> PerformOperationsOnLists (std::vector<std::vector<long>> opera
       (
         std::next(L[id_to].begin(), pos_to),
         L[id_from],
-        std::next(L[id_from].begin(), pos_from)
+        std::next(L[id_from].begin(), pos_from),
+        L[id_from].end()
       );
     }
   }
