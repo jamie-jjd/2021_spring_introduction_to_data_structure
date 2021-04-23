@@ -4,7 +4,7 @@ void BFS
 (
   Graph const &graph,
   IsDiscovered &is_discovered,
-  long const source
+  long source
 )
 {
   std::deque<long> nodes;
@@ -12,8 +12,8 @@ void BFS
   nodes.emplace_back(source);
   while (!nodes.empty())
   {
-    auto const from {nodes.front()}; nodes.pop_front();
-    for (auto const to : graph[from])
+    auto from {nodes.front()}; nodes.pop_front();
+    for (auto to : graph[from])
     {
       if (!is_discovered[to])
       {
@@ -34,7 +34,7 @@ string CheckIfConnected
 )
 {
   std::vector<std::vector<long>> graph(nodes_size);
-  for (auto const &edge : edges)
+  for (auto edge : edges)
   {
     graph[edge[0]].emplace_back(edge[1]);
     graph[edge[1]].emplace_back(edge[0]);
@@ -54,19 +54,19 @@ void DFS
 (
   Graph const &graph,
   IsVisited &is_visited,
-  long const source
+  long source
 )
 {
   std::deque<long> nodes;
   nodes.emplace_back(source);
   while (!nodes.empty())
   {
-    auto const from {nodes.back()};
+    auto from {nodes.back()};
     nodes.pop_back();
     if (!is_visited[from])
     {
       is_visited[from] = true;
-      for (auto const &to : graph[from])
+      for (auto to : graph[from])
       {
         nodes.emplace_back(to);
       }
@@ -84,7 +84,7 @@ string CheckIfConnected
 )
 {
   std::vector<std::vector<long>> graph(nodes_size);
-  for (auto const &edge : edges)
+  for (auto edge : edges)
   {
     graph[edge[0]].emplace_back(edge[1]);
     graph[edge[1]].emplace_back(edge[0]);
@@ -105,11 +105,11 @@ void RecursiveDFS
 (
   Graph const &graph,
   IsVisited &is_visited,
-  long const from
+  long from
 )
 {
   is_visited[from] = true;
-  for (auto const &to : graph[from])
+  for (auto to : graph[from])
   {
     if (!is_visited[to])
     {
@@ -128,7 +128,7 @@ string CheckIfConnected
 )
 {
   std::vector<std::vector<long>> graph(nodes_size);
-  for (auto const &edge : edges)
+  for (auto edge : edges)
   {
     graph[edge[0]].emplace_back(edge[1]);
     graph[edge[1]].emplace_back(edge[0]);
